@@ -1,7 +1,10 @@
 /* CSS rules */
+* {
+	box-sizing: border-box;
+}
 
 body {
-    margin: 0;
+	margin: 0;
 }
 
 section {
@@ -27,4 +30,46 @@ p {
 	height: 500px;
 	background-color: yellow;
 	border: 20px solid navy;
+}
+
+/* @media rules */
+
+@media screen and (max-width: 575px) {
+	.longText,
+	.box {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.shortText {
+		background-color: cornflowerblue;
+		font-size: 1.5rem;
+	}
+	.longText {
+		color: crimson;
+	}
+
+	.box {
+		width: 100%;
+		padding: 75px;
+		border: 40px solid blue;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.shortText {
+		background-color: rgba(100, 148, 237, 0.185);
+		font-size: 1rem;
+	}
+	.boxes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box {
+        width: 50%;
+    }
+    .box:last-child {
+        flex-grow: 2;
+    }
 }
