@@ -90,5 +90,43 @@ p {
 	.box:last-child {
 		flex-grow: 2;
 	}
-
 }
+
+@media screen and (min-width: 1200px) {
+    .shortText,
+    .longText {
+      display: none;
+    }
+  
+    .boxes {
+      display: flex;
+      height: 100vh;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+  
+    .box {
+      width: 50vw;
+      max-height: calc(100vh / 3);
+      order: 4;
+    }
+  
+    .box:nth-child(1) {
+      order: 3;
+      background-color: aquamarine;
+    }
+  
+    .box:nth-child(2) {
+      order: 2;
+      background-color: rgb(144, 255, 127);
+    }
+  
+    .box:nth-child(3) {
+      order: 1;
+      background-color: rgb(76, 80, 173);
+    }
+  
+    .lastline {
+      max-height: calc(100vh / 6);
+    }
+  }
